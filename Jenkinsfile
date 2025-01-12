@@ -4,10 +4,8 @@ pipeline {
         maven "MAVEN3"
         jdk "OracleJDK8"
     }
-    
+
     environment {
-        JAVA_HOME = '/usr/lib/jvm/java-<version>'
-        PATH = "${JAVA_HOME}/bin:${env.PATH}"
         SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin234'
