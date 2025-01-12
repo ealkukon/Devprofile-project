@@ -6,8 +6,6 @@ pipeline {
     }
 
     environment {
-        JAVA_HOME = '/usr/lib/jvm/java-8-openjdk-amd64' // Replace with the correct path for JDK 8
-        PATH = "${JAVA_HOME}/bin:${env.PATH}"
         SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin234'

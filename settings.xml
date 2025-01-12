@@ -13,23 +13,23 @@
       <id>${RELEASE_REPO}</id>
       <username>${NEXUS_USER}</username>
       <password>${NEXUS_PASS}</password>
-   <servers>
+    <servers>
         <server>
-            <id>vprofile-snapshot</id>
-            <username>${env.NEXUS_USER}</username>
-            <password>${env.NEXUS_PASS}</password>
+            <id>${CENTRAL_REPO}</id>
+            <name>${NEXUS_USER}</name>
+            <password>${NEXUS_PASS}</password>
         </server>
         <server>
-            <id>vprofile-release</id>
-            <username>${env.NEXUS_USER}</username>
-            <password>${env.NEXUS_PASS}</password>
+            <id>${NEXUS_GRP_REPO}</id>
+          <username>${NEXUS_USER}</username>
+          <password>${NEXUS_PASS}</password>
         </server>
     </servers>
     <mirrors>
         <mirror>
-            <id>nexus</id>
-            <mirrorOf>*</mirrorOf>
-            <url>http://${env.NEXUSIP}:${env.NEXUSPORT}/repository/${env.NEXUS_GRP_REPO}</url>
-        </mirror>
+          <id>${CENTRAL_REPO}</id>
+          <name>${CENTRAL_REPO}</name>
+          <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}</url>
+        </mirror>*</mirrorOf>
     </mirrors>
 </settings>
