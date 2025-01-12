@@ -27,6 +27,13 @@
     </servers>
     <mirrors>
         <mirror>
+            <id>{CENTRAL}</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+    <mirrors>
+        <mirror>
           <id>${CENTRAL_REPO}</id>
           <name>${CENTRAL_REPO}</name>
           <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS_GRP_REPO}</url>
