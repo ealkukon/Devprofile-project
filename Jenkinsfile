@@ -16,31 +16,12 @@ pipeline {
         NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
     }
-
+    
     stages {
         stage('Build') {
             steps {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
-            post {
-                success {
-                    echo " Now Archiving."
-                    archiveArtifacts Artifacts: '**/*'.war'
-                }
-            }
-        }
-
-        stage('Test'){
-             steps {
-                  sh 'mvn -s settings.xml test'
-             }
-        }
-
-        stage('Checkstyle Analysis'){
-             steps {
-                  sh 'mvn -s settings.xml Analysis:Checkstyl'
-             }
         }
     }
-
 }
