@@ -15,16 +15,16 @@
       <password>${NEXUS_PASS}</password>
     <servers>
         <server>
-            <id>${CENTRAL_REPO}</id>
-            <name>${NEXUS_USER}</name>
-            <password>${NEXUS_PASS}</password>
-        </server>
-        <server>
-            <id>${NEXUS_GRP_REPO}</id>
-          <username>${NEXUS_USER}</username>
-          <password>${NEXUS_PASS}</password>
-        </server>
-  </servers>
+        <id>${CENTRAL_REPO}</id>
+      <name>${NEXUS_USER}</name>
+      <password>${NEXUS_PASS}</password>
+    </server>
+    <server>
+        <id>${NEXUS_GRP_REPO}</id>
+      <username>${NEXUS_USER}</username>
+      <password>${NEXUS_PASS}</password>
+      </server>
+    </servers>
   <mirrors>
     <mirror>
       <id>${CENTRAL_REPO}</id>
